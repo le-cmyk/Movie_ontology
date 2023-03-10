@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20">
+    <Prefix name="" IRI="http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Actor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Director"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Movie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovieApp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovieTheatre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovieWorkers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Writer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGenre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTheatre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWorker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWriter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDirectorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGenreOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTheatreOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWorkerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWriterOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#genre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nationality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Travolta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kill_Bill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Actor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Director"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isDirectorOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasActor"/>
+            <Class IRI="#Actor"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDirector"/>
+            <Class IRI="#Director"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWriter"/>
+            <Class IRI="#Writer"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MovieTheatre"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isTheatreOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MovieWorkers"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isWorkerOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Writer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isWriterOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <Class IRI="#MovieWorkers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Director"/>
+        <Class IRI="#MovieWorkers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movie"/>
+        <Class IRI="#MovieApp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTheatre"/>
+            <Class IRI="#MovieTheatre"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWorker"/>
+            <Class IRI="#MovieWorkers"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieTheatre"/>
+        <Class IRI="#MovieApp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieWorkers"/>
+        <Class IRI="#MovieApp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writer"/>
+        <Class IRI="#MovieWorkers"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Movie"/>
+        <Class IRI="#MovieTheatre"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Movie"/>
+        <Class IRI="#MovieWorkers"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MovieTheatre"/>
+        <Class IRI="#MovieWorkers"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Movie"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Movie"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">59</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal>M</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal>John Travolta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal>American</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal>French</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>USA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>Action</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>Crime</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#language"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>English</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>Kill Bill</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>USA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>Crime</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#language"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>English</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>Pulp Fiction</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1994</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">53</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal>M</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal>Quentin Tarantino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal>American</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <Literal>F</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <Literal>Uma Thurman</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <ObjectProperty IRI="#hasActor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDirector"/>
+        <ObjectProperty IRI="#isDirectorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasGenre"/>
+        <ObjectProperty IRI="#isGenreOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTheatre"/>
+        <ObjectProperty IRI="#isTheatreOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasWorker"/>
+        <ObjectProperty IRI="#isWorkerOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasWriter"/>
+        <ObjectProperty IRI="#isWriterOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasActor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDirector"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasGenre"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasTheatre"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasWorker"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasWriter"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isDirectorOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isGenreOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isTheatreOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isWorkerOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isWriterOf"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActor"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDirector"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTheatre"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWorker"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWriter"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <Class IRI="#Director"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <Class IRI="#MovieTheatre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWorkerOf"/>
+        <Class IRI="#MovieWorkers"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <Class IRI="#Writer"/>
+    </ObjectPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#age"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#country"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#gender"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genre"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#language"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nationality"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#year"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#age"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#country"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#gender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#genre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#language"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nationality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#year"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

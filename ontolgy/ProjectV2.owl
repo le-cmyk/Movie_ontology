@@ -1,0 +1,265 @@
+Prefix(:=<http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20>
+
+Declaration(Class(:Actor))
+Declaration(Class(:Director))
+Declaration(Class(:Movie))
+Declaration(Class(:MovieApp))
+Declaration(Class(:MovieTheatre))
+Declaration(Class(:MovieWorkers))
+Declaration(Class(:Writer))
+Declaration(ObjectProperty(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf>))
+Declaration(ObjectProperty(:hasActor))
+Declaration(ObjectProperty(:hasDirector))
+Declaration(ObjectProperty(:hasGenre))
+Declaration(ObjectProperty(:hasTheatre))
+Declaration(ObjectProperty(:hasWorker))
+Declaration(ObjectProperty(:hasWriter))
+Declaration(ObjectProperty(:isDirectorOf))
+Declaration(ObjectProperty(:isGenreOf))
+Declaration(ObjectProperty(:isTheatreOf))
+Declaration(ObjectProperty(:isWorkerOf))
+Declaration(ObjectProperty(:isWriterOf))
+Declaration(DataProperty(:age))
+Declaration(DataProperty(:country))
+Declaration(DataProperty(:gender))
+Declaration(DataProperty(:genre))
+Declaration(DataProperty(:language))
+Declaration(DataProperty(:name))
+Declaration(DataProperty(:nationality))
+Declaration(DataProperty(:title))
+Declaration(DataProperty(:year))
+Declaration(NamedIndividual(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction>))
+Declaration(NamedIndividual(:John_Travolta))
+Declaration(NamedIndividual(:Kill_Bill))
+Declaration(NamedIndividual(:Pulp_Fiction))
+Declaration(NamedIndividual(:Quentin_Tarantino))
+Declaration(NamedIndividual(:Uma_Thurman))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> (<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf>)
+
+InverseObjectProperties(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :hasActor)
+ObjectPropertyDomain(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :Actor)
+
+# Object Property: :hasActor (:hasActor)
+
+FunctionalObjectProperty(:hasActor)
+ObjectPropertyDomain(:hasActor :Movie)
+
+# Object Property: :hasDirector (:hasDirector)
+
+InverseObjectProperties(:hasDirector :isDirectorOf)
+FunctionalObjectProperty(:hasDirector)
+ObjectPropertyDomain(:hasDirector :Movie)
+
+# Object Property: :hasGenre (:hasGenre)
+
+InverseObjectProperties(:hasGenre :isGenreOf)
+FunctionalObjectProperty(:hasGenre)
+ObjectPropertyDomain(:hasGenre :Movie)
+
+# Object Property: :hasTheatre (:hasTheatre)
+
+InverseObjectProperties(:hasTheatre :isTheatreOf)
+FunctionalObjectProperty(:hasTheatre)
+ObjectPropertyDomain(:hasTheatre :Movie)
+
+# Object Property: :hasWorker (:hasWorker)
+
+InverseObjectProperties(:hasWorker :isWorkerOf)
+FunctionalObjectProperty(:hasWorker)
+ObjectPropertyDomain(:hasWorker :Movie)
+
+# Object Property: :hasWriter (:hasWriter)
+
+InverseObjectProperties(:hasWriter :isWriterOf)
+FunctionalObjectProperty(:hasWriter)
+ObjectPropertyDomain(:hasWriter :Movie)
+
+# Object Property: :isDirectorOf (:isDirectorOf)
+
+FunctionalObjectProperty(:isDirectorOf)
+ObjectPropertyDomain(:isDirectorOf :Director)
+
+# Object Property: :isGenreOf (:isGenreOf)
+
+FunctionalObjectProperty(:isGenreOf)
+
+# Object Property: :isTheatreOf (:isTheatreOf)
+
+FunctionalObjectProperty(:isTheatreOf)
+ObjectPropertyDomain(:isTheatreOf :MovieTheatre)
+
+# Object Property: :isWorkerOf (:isWorkerOf)
+
+FunctionalObjectProperty(:isWorkerOf)
+ObjectPropertyDomain(:isWorkerOf :MovieWorkers)
+
+# Object Property: :isWriterOf (:isWriterOf)
+
+FunctionalObjectProperty(:isWriterOf)
+ObjectPropertyDomain(:isWriterOf :Writer)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :age (:age)
+
+DataPropertyDomain(:age :MovieWorkers)
+DataPropertyRange(:age xsd:int)
+
+# Data Property: :country (:country)
+
+DataPropertyDomain(:country :Movie)
+DataPropertyRange(:country xsd:string)
+
+# Data Property: :gender (:gender)
+
+DataPropertyDomain(:gender :MovieWorkers)
+DataPropertyRange(:gender xsd:string)
+
+# Data Property: :genre (:genre)
+
+DataPropertyDomain(:genre :Movie)
+DataPropertyRange(:genre xsd:string)
+
+# Data Property: :language (:language)
+
+DataPropertyDomain(:language :Movie)
+DataPropertyRange(:language xsd:string)
+
+# Data Property: :name (:name)
+
+DataPropertyDomain(:name :MovieWorkers)
+DataPropertyRange(:name xsd:string)
+
+# Data Property: :nationality (:nationality)
+
+DataPropertyDomain(:nationality :MovieWorkers)
+DataPropertyRange(:nationality xsd:string)
+
+# Data Property: :title (:title)
+
+DataPropertyDomain(:title :Movie)
+DataPropertyRange(:title xsd:string)
+
+# Data Property: :year (:year)
+
+DataPropertyDomain(:year :Movie)
+DataPropertyRange(:year xsd:int)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Actor (:Actor)
+
+EquivalentClasses(:Actor ObjectSomeValuesFrom(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :Movie))
+SubClassOf(:Actor :MovieWorkers)
+
+# Class: :Director (:Director)
+
+EquivalentClasses(:Director ObjectSomeValuesFrom(:isDirectorOf :Movie))
+SubClassOf(:Director :MovieWorkers)
+
+# Class: :Movie (:Movie)
+
+EquivalentClasses(:Movie ObjectSomeValuesFrom(:hasActor :Actor))
+EquivalentClasses(:Movie ObjectSomeValuesFrom(:hasDirector :Director))
+EquivalentClasses(:Movie ObjectSomeValuesFrom(:hasWriter :Writer))
+SubClassOf(:Movie :MovieApp)
+SubClassOf(:Movie ObjectSomeValuesFrom(:hasTheatre :MovieTheatre))
+SubClassOf(:Movie ObjectSomeValuesFrom(:hasWorker :MovieWorkers))
+DisjointClasses(:Movie :MovieTheatre)
+DisjointClasses(:Movie :MovieWorkers)
+
+# Class: :MovieTheatre (:MovieTheatre)
+
+EquivalentClasses(:MovieTheatre ObjectSomeValuesFrom(:isTheatreOf :Movie))
+SubClassOf(:MovieTheatre :MovieApp)
+DisjointClasses(:MovieTheatre :MovieWorkers)
+
+# Class: :MovieWorkers (:MovieWorkers)
+
+EquivalentClasses(:MovieWorkers ObjectSomeValuesFrom(:isWorkerOf :Movie))
+SubClassOf(:MovieWorkers :MovieApp)
+
+# Class: :Writer (:Writer)
+
+EquivalentClasses(:Writer ObjectSomeValuesFrom(:isWriterOf :Movie))
+SubClassOf(:Writer :MovieWorkers)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :John_Travolta (:John_Travolta)
+
+ClassAssertion(:MovieWorkers :John_Travolta)
+ObjectPropertyAssertion(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :John_Travolta <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction>)
+DataPropertyAssertion(:age :John_Travolta "59"^^xsd:int)
+DataPropertyAssertion(:gender :John_Travolta "M"^^xsd:string)
+DataPropertyAssertion(:name :John_Travolta "John Travolta"^^xsd:string)
+DataPropertyAssertion(:nationality :John_Travolta "American"^^xsd:string)
+DataPropertyAssertion(:nationality :John_Travolta "French"^^xsd:string)
+
+# Individual: :Kill_Bill (:Kill_Bill)
+
+ClassAssertion(:Movie :Kill_Bill)
+DataPropertyAssertion(:country :Kill_Bill "USA"^^xsd:string)
+DataPropertyAssertion(:genre :Kill_Bill "Action"^^xsd:string)
+DataPropertyAssertion(:genre :Kill_Bill "Crime"^^xsd:string)
+DataPropertyAssertion(:genre :Kill_Bill "Thriller"^^xsd:string)
+DataPropertyAssertion(:language :Kill_Bill "English"^^xsd:string)
+DataPropertyAssertion(:title :Kill_Bill "Kill Bill"^^xsd:string)
+DataPropertyAssertion(:year :Kill_Bill "2003"^^xsd:int)
+
+# Individual: :Pulp_Fiction (:Pulp_Fiction)
+
+ClassAssertion(:Movie :Pulp_Fiction)
+DataPropertyAssertion(:country :Pulp_Fiction "USA"^^xsd:string)
+DataPropertyAssertion(:genre :Pulp_Fiction "Crime"^^xsd:string)
+DataPropertyAssertion(:genre :Pulp_Fiction "Thriller"^^xsd:string)
+DataPropertyAssertion(:language :Pulp_Fiction "English"^^xsd:string)
+DataPropertyAssertion(:title :Pulp_Fiction "Pulp Fiction"^^xsd:string)
+DataPropertyAssertion(:year :Pulp_Fiction "1994"^^xsd:int)
+
+# Individual: :Quentin_Tarantino (:Quentin_Tarantino)
+
+ClassAssertion(:MovieWorkers :Quentin_Tarantino)
+ObjectPropertyAssertion(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :Quentin_Tarantino <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :Quentin_Tarantino :Kill_Bill)
+ObjectPropertyAssertion(:isDirectorOf :Quentin_Tarantino <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill>)
+ObjectPropertyAssertion(:isDirectorOf :Quentin_Tarantino <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction>)
+DataPropertyAssertion(:age :Quentin_Tarantino "53"^^xsd:int)
+DataPropertyAssertion(:gender :Quentin_Tarantino "M"^^xsd:string)
+DataPropertyAssertion(:name :Quentin_Tarantino "Quentin Tarantino"^^xsd:string)
+DataPropertyAssertion(:nationality :Quentin_Tarantino "American"^^xsd:string)
+
+# Individual: :Uma_Thurman (:Uma_Thurman)
+
+ClassAssertion(:MovieWorkers :Uma_Thurman)
+ObjectPropertyAssertion(<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :Uma_Thurman :Pulp_Fiction)
+ObjectPropertyAssertion(:isWriterOf :Uma_Thurman <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill>)
+DataPropertyAssertion(:age :Uma_Thurman "43"^^xsd:int)
+DataPropertyAssertion(:gender :Uma_Thurman "F"^^xsd:string)
+DataPropertyAssertion(:name :Uma_Thurman "Uma Thurman"^^xsd:string)
+
+
+)
