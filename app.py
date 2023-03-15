@@ -4,6 +4,9 @@
 
 import streamlit as st  # pip install streamlit
 from owlready2 import *
+from requetes import dictionnaire
+
+#owlready2.JAVA_EXE = "C:\\path\\to\\java.exe"
 
 #---- Importation of the class and functions
 
@@ -11,32 +14,29 @@ from owlready2 import *
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/ 
 st.set_page_config(page_title="Ontology Project", page_icon=":clapper:", layout="wide")
 
-# ---- READ CSV ----
+# Chemin 
 
-path=r"ontolgy/ProjectV3.owl"
+path="ontolgy/ProjectV3.owl"
 
 onto = get_ontology(path).load()
 
+#sync_reasoner_pellet(onto)
 sync_reasoner()
+
+world = onto.world
+
 st.write("load effective")
 
-query="""PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mv: <http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#>
-
-SELECT ?actor
-WHERE {
-	?actor rdf:type mv:Actor
-}
-"""
+for key in dictionnaire.keys():
+  if len(dictionnaire[key])>70:
+    st.write("----")
+    st.write(key)
+    results = list(world.sparql(dictionnaire[key]))
+    res=[ str(result[0])[10:] for result in results]
+    for r in res:
+      st.write(str(r))
 
 
-results = list(default_world.sparql(query))
-
-st.write(len(results))
-for result in results:
-  st.write(result)
 
 
 # ---- HIDE STREAMLIT STYLE ----
