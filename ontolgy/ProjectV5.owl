@@ -1,0 +1,1098 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20">
+    <Prefix name="" IRI="http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Actor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Director"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Movie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovieApp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovieTheatre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovieWorkers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Writer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTheatre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWorker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWriter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDirectorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTheatreOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWorkerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWriterOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#objActor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#objDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#objTheatre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#objWorker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#objWriter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#city"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dataMovie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dataTheatre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dataWorkers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#endDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#genre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#locationTheatre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nameTheatre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nationality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numStreet"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#postalCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#startDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#street"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Christopher_Nolan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Interstellar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jessica_Chastain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Travolta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kill_Bill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Actor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Director"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isDirectorOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasActor"/>
+            <Class IRI="#Actor"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDirector"/>
+            <Class IRI="#Director"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWorker"/>
+            <Class IRI="#MovieWorkers"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWriter"/>
+            <Class IRI="#Writer"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MovieTheatre"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isTheatreOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MovieWorkers"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isWorkerOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Writer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isWriterOf"/>
+            <Class IRI="#Movie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <Class IRI="#MovieWorkers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Director"/>
+        <Class IRI="#MovieWorkers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movie"/>
+        <Class IRI="#MovieApp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTheatre"/>
+            <Class IRI="#MovieTheatre"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieTheatre"/>
+        <Class IRI="#MovieApp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieWorkers"/>
+        <Class IRI="#MovieApp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Writer"/>
+        <Class IRI="#MovieWorkers"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Movie"/>
+        <Class IRI="#MovieTheatre"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Movie"/>
+        <Class IRI="#MovieWorkers"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MovieTheatre"/>
+        <Class IRI="#MovieWorkers"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#Christopher_Nolan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Movie"/>
+        <NamedIndividual IRI="#Interstellar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#Jessica_Chastain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Movie"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Movie"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieTheatre"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieTheatre"/>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieWorkers"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <NamedIndividual IRI="#Christopher_Nolan"/>
+        <NamedIndividual IRI="#Interstellar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#Jessica_Chastain"/>
+        <NamedIndividual IRI="#Interstellar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+        <NamedIndividual IRI="#Interstellar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Christopher_Nolan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">53</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#Christopher_Nolan"/>
+        <Literal>M</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Christopher_Nolan"/>
+        <Literal>Christopher Nolan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#Christopher_Nolan"/>
+        <Literal>British</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal>Royaume-Uni</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal>USA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#endDate"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-20T20:45:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal>Drame</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal>Science-Fiction</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#language"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal>English</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#startDate"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2014-11-05T11:30:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal>Interstellar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Interstellar"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Jessica_Chastain"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#Jessica_Chastain"/>
+        <Literal>F</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Jessica_Chastain"/>
+        <Literal>Jessica Chastain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#Jessica_Chastain"/>
+        <Literal>American</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">59</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal>M</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal>John Travolta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#John_Travolta"/>
+        <Literal>American</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>usa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>action</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>crime</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>thriller</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#language"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>english</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal>Kill Bill (volume 1)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Kill_Bill"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>USA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#endDate"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1995-01-26T18:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>Crime</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>Thriller</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#language"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>English</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#startDate"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1994-10-26T10:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal>Pulp Fiction</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#Pulp_Fiction"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1994</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">53</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal>M</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal>Quentin Tarantino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#Quentin_Tarantino"/>
+        <Literal>American</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#city"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+        <Literal>Paris</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nameTheatre"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+        <Literal>UGC Ciné Cité Bercy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numStreet"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#postalCode"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">75012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#street"/>
+        <NamedIndividual IRI="#UGC_Bercy"/>
+        <Literal>Cour Saint-Emilion</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#city"/>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+        <Literal>Puteaux</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nameTheatre"/>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+        <Literal>UGC Ciné Cité La Défense</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#postalCode"/>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">92800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#street"/>
+        <NamedIndividual IRI="#UGC_LaDéfense"/>
+        <Literal>Parvis de la défense</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gender"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <Literal>F</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Uma_Thurman"/>
+        <Literal>Uma Thurman</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <ObjectProperty IRI="#objActor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActor"/>
+        <ObjectProperty IRI="#objActor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDirector"/>
+        <ObjectProperty IRI="#objDirector"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTheatre"/>
+        <ObjectProperty IRI="#objTheatre"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWorker"/>
+        <ObjectProperty IRI="#objWorker"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWriter"/>
+        <ObjectProperty IRI="#objWriter"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <ObjectProperty IRI="#objDirector"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <ObjectProperty IRI="#objTheatre"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isWorkerOf"/>
+        <ObjectProperty IRI="#objWorker"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <ObjectProperty IRI="#objWriter"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#objActor"/>
+        <ObjectProperty IRI="#objWorker"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#objDirector"/>
+        <ObjectProperty IRI="#objWorker"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#objWriter"/>
+        <ObjectProperty IRI="#objWorker"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <ObjectProperty IRI="#hasActor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDirector"/>
+        <ObjectProperty IRI="#isDirectorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTheatre"/>
+        <ObjectProperty IRI="#isTheatreOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasWorker"/>
+        <ObjectProperty IRI="#isWorkerOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasWriter"/>
+        <ObjectProperty IRI="#isWriterOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActor"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDirector"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTheatre"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWorker"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWriter"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <Class IRI="#Director"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <Class IRI="#MovieTheatre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWorkerOf"/>
+        <Class IRI="#MovieWorkers"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <Class IRI="#Writer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#objActor"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#objDirector"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#objTheatre"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#objWorker"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#objWriter"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActor"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDirector"/>
+        <Class IRI="#Director"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTheatre"/>
+        <Class IRI="#MovieTheatre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWorker"/>
+        <Class IRI="#MovieWorkers"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWriter"/>
+        <Class IRI="#Writer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDirectorOf"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTheatreOf"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWorkerOf"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWriterOf"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#objActor"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#objDirector"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#objTheatre"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#objWorker"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#objWriter"/>
+        <Class IRI="#MovieApp"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#age"/>
+        <DataProperty IRI="#dataWorkers"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#city"/>
+        <DataProperty IRI="#locationTheatre"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#country"/>
+        <DataProperty IRI="#dataMovie"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#endDate"/>
+        <DataProperty IRI="#dataMovie"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#gender"/>
+        <DataProperty IRI="#dataWorkers"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#genre"/>
+        <DataProperty IRI="#dataMovie"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#language"/>
+        <DataProperty IRI="#dataMovie"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#locationTheatre"/>
+        <DataProperty IRI="#dataTheatre"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#name"/>
+        <DataProperty IRI="#dataWorkers"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nameTheatre"/>
+        <DataProperty IRI="#dataTheatre"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nationality"/>
+        <DataProperty IRI="#dataWorkers"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numStreet"/>
+        <DataProperty IRI="#locationTheatre"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#postalCode"/>
+        <DataProperty IRI="#locationTheatre"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#startDate"/>
+        <DataProperty IRI="#dataMovie"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#street"/>
+        <DataProperty IRI="#locationTheatre"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#title"/>
+        <DataProperty IRI="#dataMovie"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#year"/>
+        <DataProperty IRI="#dataMovie"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#age"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#city"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#gender"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#name"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#numStreet"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#postalCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#title"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#year"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#age"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#city"/>
+        <Class IRI="#MovieTheatre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#country"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dataMovie"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dataTheatre"/>
+        <Class IRI="#MovieTheatre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dataWorkers"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#endDate"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#gender"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genre"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#language"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#locationTheatre"/>
+        <Class IRI="#MovieTheatre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nameTheatre"/>
+        <Class IRI="#MovieTheatre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nationality"/>
+        <Class IRI="#MovieWorkers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numStreet"/>
+        <Class IRI="#MovieTheatre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#postalCode"/>
+        <Class IRI="#MovieTheatre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#startDate"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#street"/>
+        <Class IRI="#MovieTheatre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#year"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#age"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#city"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#country"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#endDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#gender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#genre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#language"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nameTheatre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nationality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numStreet"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#postalCode"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#startDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#street"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#year"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DisjointDataProperties>
+        <DataProperty IRI="#dataMovie"/>
+        <DataProperty IRI="#dataTheatre"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="#dataMovie"/>
+        <DataProperty IRI="#dataWorkers"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="#dataTheatre"/>
+        <DataProperty IRI="#dataWorkers"/>
+    </DisjointDataProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
