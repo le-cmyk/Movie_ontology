@@ -38,8 +38,9 @@ dictionnaire={"List_the_instances_of_the_class_Actor":
                         WHERE {
                                 ?t mv:title ?title .
                                 ?m mv:genre ?genre .
-                                ?m rdf:type mv:Movie .
-                                FILTER (?genre = "Thriller" || ?genre = "Crime")	
+                                FILTER (?genre = "Thriller" || ?genre = "Crime")
+                                
+                        	
                         }
             """,
             "List_the_name_of_Actors_older_than_51_years":
