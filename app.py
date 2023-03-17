@@ -7,7 +7,6 @@ from owlready2 import *
 from requetes import dictionnaire 
 import pandas as pd
 import re
-import json
 import random
 
 
@@ -29,8 +28,6 @@ l="""with onto:
   sync_reasoner_pellet()
   st.sidebar.write("Reasonner active")"""
 
-with onto:
-  sync_reasoner_pellet(infer_data_property_values=True)
 
 world = onto.world
 
