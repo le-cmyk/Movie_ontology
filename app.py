@@ -86,12 +86,21 @@ with open(path, "r") as f:
     else:
         st.write(f"{title} is not mentioned in the OWL file.")
 
-c_1,c_2=st.columns(2)
-
 
 with st.expander("List of Persons", expanded=False):
-        df=pd.DataFrame(Person, columns=["Person"])
-        st.write(df)
+  df=pd.DataFrame(Person, columns=["Person"])
+  st.write(df)
+  json_file = df.to_json()
+  st.download_button(
+    label="Download data as JSON",
+    data=json_file,
+    file_name='data'+str(random.random())+'.json',
+    mime='text/json',
+  )
+st.write("----")
+
+c_1,c_2=st.columns(2)
+
 
 display_sparql_results(c_1, "List_the_instances_of_the_class_Actor","List of actors", ["Actors"])
 
