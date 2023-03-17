@@ -1,0 +1,480 @@
+@prefix : <http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20> .
+
+<http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf
+<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:subPropertyOf :objActor ;
+                                                                                    owl:inverseOf :hasActor ;
+                                                                                    rdfs:domain :Actor ;
+                                                                                    rdfs:range :Movie .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#hasActor
+:hasActor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :objActor ;
+          rdfs:domain :Movie ;
+          rdfs:range :Actor .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#hasDirector
+:hasDirector rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :objDirector ;
+             owl:inverseOf :isDirectorOf ;
+             rdfs:domain :Movie ;
+             rdfs:range :Director .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#hasTheatre
+:hasTheatre rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :objTheatre ;
+            owl:inverseOf :isTheatreOf ;
+            rdfs:domain :Movie ;
+            rdfs:range :MovieTheatre .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#hasWorker
+:hasWorker rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :objWorker ;
+           owl:inverseOf :isWorkerOf ;
+           rdfs:domain :Movie ;
+           rdfs:range :MovieWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#hasWriter
+:hasWriter rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :objWriter ;
+           owl:inverseOf :isWriterOf ;
+           rdfs:domain :Movie ;
+           rdfs:range :Writer .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#isDirectorOf
+:isDirectorOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :objDirector ;
+              rdfs:domain :Director ;
+              rdfs:range :Movie .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#isTheatreOf
+:isTheatreOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :objTheatre ;
+             rdfs:domain :MovieTheatre ;
+             rdfs:range :Movie .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#isWorkerOf
+:isWorkerOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :objWorker ;
+            rdfs:domain :MovieWorkers ;
+            rdfs:range :Movie .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#isWriterOf
+:isWriterOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :objWriter ;
+            rdfs:domain :Writer ;
+            rdfs:range :Movie .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#objActor
+:objActor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :objWorker ;
+          rdfs:domain :MovieApp ;
+          rdfs:range :MovieApp .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#objDirector
+:objDirector rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :objWorker ;
+             rdfs:domain :MovieApp ;
+             rdfs:range :MovieApp .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#objTheatre
+:objTheatre rdf:type owl:ObjectProperty ;
+            rdfs:domain :MovieApp ;
+            rdfs:range :MovieApp .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#objWorker
+:objWorker rdf:type owl:ObjectProperty ;
+           rdfs:domain :MovieApp ;
+           rdfs:range :MovieApp .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#objWriter
+:objWriter rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :objWorker ;
+           rdfs:domain :MovieApp ;
+           rdfs:range :MovieApp .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#age
+:age rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :dataWorkers ;
+     rdf:type owl:FunctionalProperty ;
+     rdfs:domain :MovieWorkers ;
+     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#city
+:city rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :locationTheatre ;
+      rdf:type owl:FunctionalProperty ;
+      rdfs:domain :MovieTheatre ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#country
+:country rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :dataMovie ;
+         rdfs:domain :Movie ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#dataMovie
+:dataMovie rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Movie ;
+           owl:propertyDisjointWith :dataTheatre ,
+                                    :dataWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#dataTheatre
+:dataTheatre rdf:type owl:DatatypeProperty ;
+             rdfs:domain :MovieTheatre ;
+             owl:propertyDisjointWith :dataWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#dataWorkers
+:dataWorkers rdf:type owl:DatatypeProperty ;
+             rdfs:domain :MovieWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#endDate
+:endDate rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :dataMovie ;
+         rdfs:domain :Movie ;
+         rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#gender
+:gender rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :dataWorkers ;
+        rdf:type owl:FunctionalProperty ;
+        rdfs:domain :MovieWorkers ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#genre
+:genre rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :dataMovie ;
+       rdfs:domain :Movie ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :dataMovie ;
+          rdfs:domain :Movie ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#locationTheatre
+:locationTheatre rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :dataTheatre ;
+                 rdfs:domain :MovieTheatre .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :dataWorkers ;
+      rdf:type owl:FunctionalProperty ;
+      rdfs:domain :MovieWorkers ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#nameTheatre
+:nameTheatre rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :dataTheatre ;
+             rdfs:domain :MovieTheatre ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#nationality
+:nationality rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :dataWorkers ;
+             rdfs:domain :MovieWorkers ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#numStreet
+:numStreet rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :locationTheatre ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :MovieTheatre ;
+           rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#postalCode
+:postalCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :locationTheatre ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :MovieTheatre ;
+            rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#startDate
+:startDate rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :dataMovie ;
+           rdfs:domain :Movie ;
+           rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#street
+:street rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :locationTheatre ;
+        rdfs:domain :MovieTheatre ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#title
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :dataMovie ;
+       rdf:type owl:FunctionalProperty ;
+       rdfs:domain :Movie ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#year
+:year rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :dataMovie ;
+      rdf:type owl:FunctionalProperty ;
+      rdfs:domain :Movie ;
+      rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Actor
+:Actor rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> ;
+                             owl:someValuesFrom :Movie
+                           ] ;
+       rdfs:subClassOf :MovieWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Director
+:Director rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :isDirectorOf ;
+                                owl:someValuesFrom :Movie
+                              ] ;
+          rdfs:subClassOf :MovieWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Movie
+:Movie rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasActor ;
+                             owl:someValuesFrom :Actor
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasDirector ;
+                             owl:someValuesFrom :Director
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasWorker ;
+                             owl:someValuesFrom :MovieWorkers
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasWriter ;
+                             owl:someValuesFrom :Writer
+                           ] ;
+       rdfs:subClassOf :MovieApp ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTheatre ;
+                         owl:someValuesFrom :MovieTheatre
+                       ] ;
+       owl:disjointWith :MovieTheatre ,
+                        :MovieWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#MovieApp
+:MovieApp rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#MovieTheatre
+:MovieTheatre rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isTheatreOf ;
+                                    owl:someValuesFrom :Movie
+                                  ] ;
+              rdfs:subClassOf :MovieApp ;
+              owl:disjointWith :MovieWorkers .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#MovieWorkers
+:MovieWorkers rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isWorkerOf ;
+                                    owl:someValuesFrom :Movie
+                                  ] ;
+              rdfs:subClassOf :MovieApp .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Writer
+:Writer rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :isWriterOf ;
+                              owl:someValuesFrom :Movie
+                            ] ;
+        rdfs:subClassOf :MovieWorkers .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill
+<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction
+<http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Christopher_Nolan
+:Christopher_Nolan rdf:type owl:NamedIndividual ,
+                            :MovieWorkers ;
+                   :isWriterOf :Interstellar ;
+                   :age "53"^^xsd:int ;
+                   :gender "M" ;
+                   :name "Christopher Nolan" ;
+                   :nationality "British" .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Interstellar
+:Interstellar rdf:type owl:NamedIndividual ,
+                       :Movie ;
+              :country "Royaume-Uni" ,
+                       "USA" ;
+              :endDate "2015-02-20T20:45:00"^^xsd:dateTime ;
+              :genre "Drame" ,
+                     "Science-Fiction" ;
+              :language "English" ;
+              :startDate "2014-11-05T11:30:00"^^xsd:dateTime ;
+              :title "Interstellar" ;
+              :year "2014"^^xsd:int .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Jessica_Chastain
+:Jessica_Chastain rdf:type owl:NamedIndividual ,
+                           :MovieWorkers ;
+                  <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :Interstellar ;
+                  :age "46"^^xsd:int ;
+                  :gender "F" ;
+                  :name "Jessica Chastain" ;
+                  :nationality "American" .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#John_Travolta
+:John_Travolta rdf:type owl:NamedIndividual ,
+                        :MovieWorkers ;
+               <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction> ;
+               :age "59"^^xsd:int ;
+               :gender "M" ;
+               :name "John Travolta" ;
+               :nationality "American" .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Kill_Bill
+:Kill_Bill rdf:type owl:NamedIndividual ,
+                    :Movie ;
+           :country "usa" ;
+           :genre "action" ,
+                  "crime" ,
+                  "thriller" ;
+           :language "english" ;
+           :title "Kill Bill (volume 1)" ;
+           :year "2003"^^xsd:int .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Pulp_Fiction
+:Pulp_Fiction rdf:type owl:NamedIndividual ,
+                       :Movie ;
+              :country "USA" ;
+              :endDate "1995-01-26T18:00:00"^^xsd:dateTime ;
+              :genre "Crime" ,
+                     "Thriller" ;
+              :language "English" ;
+              :startDate "1994-10-26T10:00:00"^^xsd:dateTime ;
+              :title "Pulp Fiction" ;
+              :year "1994"^^xsd:int .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Quentin_Tarantino
+:Quentin_Tarantino rdf:type owl:NamedIndividual ,
+                            :MovieWorkers ;
+                   <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill> ;
+                   :isDirectorOf <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill> ,
+                                 :Pulp_Fiction ;
+                   :isWriterOf <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction> ,
+                               :Kill_Bill ;
+                   :age "53"^^xsd:int ;
+                   :gender "M" ;
+                   :name "Quentin Tarantino" ;
+                   :nationality "American" .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#UGC_Bercy
+:UGC_Bercy rdf:type owl:NamedIndividual ,
+                    :MovieTheatre ;
+           :isTheatreOf <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill> ,
+                        :Interstellar ;
+           :city "Paris" ;
+           :nameTheatre "UGC Ciné Cité Bercy" ;
+           :numStreet "2"^^xsd:int ;
+           :postalCode "75012"^^xsd:int ;
+           :street "Cour Saint-Emilion" .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#UGC_LaDéfense
+:UGC_LaDéfense rdf:type owl:NamedIndividual ,
+                        :MovieTheatre ;
+               :isTheatreOf <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Kill_Bill> ,
+                            <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#Pulp_Fiction> ;
+               :city "Puteaux" ;
+               :nameTheatre "UGC Ciné Cité La Défense" ;
+               :postalCode "92800"^^xsd:int ;
+               :street "Parvis de la défense" .
+
+
+###  http://www.semanticweb.org/esilv/ontologies/2023/2/untitled-ontology-20#Uma_Thurman
+:Uma_Thurman rdf:type owl:NamedIndividual ,
+                      :MovieWorkers ;
+             <http://www.semanticweb.org/esilv/ontologies/2023/1/untitled-ontology-18#isActorOf> :Pulp_Fiction ;
+             :isWriterOf :Kill_Bill ;
+             :age "43"^^xsd:int ;
+             :gender "F" ;
+             :name "Uma Thurman" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

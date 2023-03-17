@@ -3,9 +3,12 @@
 
 
 import streamlit as st  # pip install streamlit
-from owlready2 import get_ontology
-from requetes import dictionnaire
+from owlready2 import *
+from requetes import dictionnaire 
 import pandas as pd
+import re
+import json
+import random
 
 
 #---- Importation of the class and functions
@@ -22,9 +25,12 @@ onto = get_ontology(path).load()
 
 st.sidebar.write("Load effective")
 
-#with onto:
-  #sync_reasoner_pellet()
-  #st.sidebar.write("Reasonner active")
+l="""with onto:
+  sync_reasoner_pellet()
+  st.sidebar.write("Reasonner active")"""
+
+with onto:
+  sync_reasoner_pellet(infer_data_property_values=True)
 
 world = onto.world
 
@@ -40,15 +46,58 @@ def display_sparql_results(c, query_key,title, column_names):
     df=df.astype(str)
     df = df.replace({'ProjectV5\.':''}, regex=True)
     # Afficher le DataFrame dans un expander
+    json_file = df.to_json()
+    
+
     with c.expander(title, expanded=False):
         st.write(df)
+        st.download_button(
+          label="Download data as JSON",
+          data=json_file,
+          file_name='data'+str(random.random())+'.json',
+          mime='text/json',
+      )
 
 
-st.title(":movie_camera: Movies ontowlogy presentation")
+
+
+
+
+st.title(":movie_camera: Movies ontology presentation")
+
 st.markdown("#")
+
+
+title = st.text_input('Movie title', 'Interstellar')
+
+with open(path, "r") as f:
+    
+    data = f.read()
+
+    Person = re.findall(r'<ClassAssertion>\s+<Class IRI="#MovieWorkers"/>\s+<NamedIndividual IRI="#([^"]+)"/>', data)
+
+    match = re.search(f'<NamedIndividual IRI="#{title}"/>', data)
+
+    genre = re.findall(rf'<DataProperty IRI="#genre"/>\s+<NamedIndividual IRI="#{title}"/>\s+<Literal>([^<]+)</Literal>', data)
+
+    country = re.findall(rf'<DataProperty IRI="#country"/>\s+<NamedIndividual IRI="#{title}"/>\s+<Literal>([^<]+)</Literal>', data)
+
+    year = re.findall(rf'<DataProperty IRI="#year"/>\s+<NamedIndividual IRI="#{title}"/>\s+<Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">([^<]+)</Literal>', data)
+
+    if match:
+        st.write(f"{title} is mentioned in the OWL file and it's genre {genre} and in the countries {country} and created in {year[0]}.")
+    else:
+        st.write(f"{title} is not mentioned in the OWL file.")
+
 c_1,c_2=st.columns(2)
 
+
+with st.expander("List of Persons", expanded=False):
+        df=pd.DataFrame(Person, columns=["Person"])
+        st.write(df)
+
 display_sparql_results(c_1, "List_the_instances_of_the_class_Actor","List of actors", ["Actors"])
+
 
 display_sparql_results(c_2, "List_the_name_of_all_Thriller_movies","List of the directors of thriller movies", ["Directors","Movies"])
 
