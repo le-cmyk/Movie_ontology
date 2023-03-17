@@ -65,7 +65,8 @@ st.title(":movie_camera: Movies ontology presentation")
 st.markdown("#")
 
 
-title = st.text_input('Movie title', 'Interstellar')
+title = st.text_input('Movie Title', 'Interstellar')
+
 
 with open(path, "r") as f:
     

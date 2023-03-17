@@ -1,8 +1,17 @@
 
-# Interactive DEFI Strategy with Python – Streamlit
+# Interactive Ontology with Python – Streamlit
 
-Projet of a DEFI Strategy
+Group projet of an ontology about movies
 
+## Requirement
+
+```Powershell
+# streamlit
+pip install streamlit
+
+# owlready2
+pip install owlready2
+```
 
 ## Run the app
 ```Powershell
@@ -13,4 +22,4 @@ streamlit run app.py
 ctrl-c
 ```
 
-link to the website : https://kryptosphere-defi-strategy.streamlit.app/
+link to the website : https://le-cmyk-movie-ontology-app-ge51ex.streamlit.app/
